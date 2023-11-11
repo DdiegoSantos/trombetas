@@ -26,38 +26,60 @@
         width: 100%;
         height: 100%;
         margin: auto;
-        
+
         display: flex;
         flex-wrap: wrap;
 
     }
 
     #trombetas {
-        width: 50%;
-        
-        margin:  350px auto auto auto;
+        width: 60%;
+        margin: auto;
+        position: absolute;
+        right: 20%;
+        bottom: 250px;
+        color: #fff
     }
-    #trombetas img{
+
+    #trombetas img {
         width: 100%;
     }
-    #dias{
+
+    #dias {
         width: 60%;
-    
+        margin: auto;
+        position: absolute;
+        right: 20%;
+        bottom: 110px;
+        color: #fff
+    }
+
+    #botom a {
+        width: 60%;
         margin: auto;
         position: absolute;
         right: 20%;
         bottom: 30px;
         color: #fff
     }
+
+    #botom img {
+        width: 100%;
+    }
 </style>
 
 <body onload="dias()">
     <section>
         <div id="trombetas">
-            <img src="imagem/3_trombetas.png" alt="">
+            <img src="imagem/3_trombetas2.png" alt="">
         </div>
         <div id="dias">
             <h2>Faltam <span id="dataT"></span></h2>
+        </div>
+        <div id="botom">
+            <a href="trombetas.html" target="_blank">
+                <img src="imagem/botom.png" alt="">
+            </a>
         </div>
 
     </section>
@@ -65,12 +87,23 @@
 <script>
     var data = new Date();
     var dia = data.getDate();
-    function dias(){
+    function dias() {
         var diaEvento = 26;
         var DataT = document.getElementById('dataT');
 
         DataT.innerText = `${diaEvento - dia} dias para a festa! Convidem a todos!`
 
+        janela = window.screen.width;
+        if (janela > 1000) {
+            section = document.getElementsByTagName('section')[0];
+            nomeTrombeteas = document.getElementById('trombetas');
+
+            section.style.backgroundImage = "url('imagem/trombetas_maior.png')";
+            section.style.backgroundSize = "100% 110%";
+            section.style.backgroundPosition = "50% 50%"
+
+            nomeTrombeteas.style.display = "none";
+        }
     }
 </script>
 
