@@ -33,9 +33,9 @@
     }
 
     #trombetas {
-        width: 60%;
-        margin: auto;
-        position: absolute;
+        width: 55%;
+        margin: 75% auto 0 auto;
+        position: static;
         right: 20%;
         bottom: 250px;
         color: #fff
@@ -75,7 +75,7 @@
             <img src="imagem/3_trombetas2.png" alt="">
         </div>
         <div id="dias">
-            <h2>Faltam <span id="dataT"></span></h2>
+            <h2>Faltam <span id="dataT"></span> dias para a festa! <br> Convidem a todos!</h2>
         </div>
         <div id="botom">
             <a href="trombetas.html" target="_blank">
@@ -98,7 +98,7 @@
         var diaEvento = 26;
         var DataT = document.getElementById('dataT');
 
-        DataT.innerText = `${diaEvento - dia} dias para a festa! Convidem a todos!`
+        DataT.innerText = `${diaEvento - dia} `
 
 
 
@@ -119,9 +119,9 @@
     }
     function janelamenor() {
         if(janela < 600){
-            nomeTrombeteas.style.bottom = "140px";
+            nomeTrombeteas.style.bottom = "160px";
             nomeTrombeteas.style.width = "55%";
-            nomeTrombeteas.style.right = "24%";
+            nomeTrombeteas.style.right = "23%";
 
             boxDias.style.bottom = "80px";
             boxDias.style.fontSize = "12px";
