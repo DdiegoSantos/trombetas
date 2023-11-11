@@ -69,7 +69,7 @@
     }
 </style>
 
-<body onload="dias(), janelamenor()">
+<body onload="dias(), janelamenor(),heightmenor()">
     <section>
         <div id="trombetas">
             <img src="imagem/3_trombetas2.png" alt="">
@@ -125,6 +125,15 @@
 
             boxDias.style.bottom = "80px";
             boxDias.style.fontSize = "12px";
+        }
+    }
+    function heightmenor() {
+        let altura = window.screen.height;
+        if(altura < 600){
+            
+            
+
+            boxDias.style.fontSize = "10px";
         }
     }
 </script>
