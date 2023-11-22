@@ -75,7 +75,15 @@
             <img src="imagem/3_trombetas2.png" alt="">
         </div>
         <div id="dias">
-            <h2>Faltam <span id="dataT"></span> dias para a festa! Convidem a todos!</h2>
+            <h2>Faltam <span id="dataT"></span> dias <form name="form_main">
+                    <div>
+                        <span id="hour"></span>h<span id="minute">00</span> <span id="millisecond"></span>
+                    </div>
+
+                    <br />
+
+
+                </form>para a festa! <br> Convidem a todos!</h2>
         </div>
         <div id="botom">
             <a href="trombetas.html" target="_blank">
@@ -88,18 +96,33 @@
 <script>
     var data = new Date();
     var dia = data.getDate();
+    var horas = data.getHours();
+    var min = data.getMinutes();
+    var sec = data.getSeconds();
 
     var nomeTrombeteas = document.getElementById('trombetas');
     var janela = window.screen.width;
     var boxDias = document.getElementById('dias');
     var botom = document.getElementById('botom');
 
+    var hour = document.getElementById('hour');
+    var minute = document.getElementById('minute');
+    var second = document.getElementById('second');
+
     function dias() {
         var diaEvento = 26;
         var DataT = document.getElementById('dataT');
+        var diaRest = diaEvento - dia;
 
         DataT.innerText = `${diaEvento - dia} `
+        if (horas > 11) {
+            hour.innerText = 35 - horas;
 
+        } else {
+            hour.innerText = 11 - horas;
+        }
+        minute.innerText = 60 - min;
+       
 
 
         if (janela > 1000) {
