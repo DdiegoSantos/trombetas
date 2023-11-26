@@ -121,11 +121,11 @@
         if (horas > 11) {
             hour.innerText = 35 - horas;
 
-        } else {
+        } else if{
             hour.innerText = 11 - horas;
-        }
+        }else{
 
-        minute.innerText = 60 - min;
+        minute.innerText = 60 - min;}
 
         if (janela > 1000) {
             section = document.getElementsByTagName('section')[0];
